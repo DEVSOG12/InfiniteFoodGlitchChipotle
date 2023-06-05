@@ -132,7 +132,7 @@ async def main():
     api = API(pool)
 
     while True:
-        tweets = await gather(api.user_tweets(USER_ID, limit=1))
+        tweets = await gather(api.user_tweets(USER_ID, limit=1  ))
 
         if check_tweets(tweets) == False:
             continue

@@ -35,13 +35,18 @@ codes = set(line.strip() for line in open("codes.txt"))
 
 
 def find_code(str):
-    pattern = "[\d\w&%$@!#]+ to 888222"  # find pattern 'blahblahblah to 888222'
+    pattern = "[\d\w&\-%$@!#]+ to 888222"  # find pattern 'blahblahblah to 888222'
+    # Fix pattern to find "$K-9FREE3S"
+    
     matches = re.findall(pattern, str)
     if len(matches) == 0:
         return ('', '')
 
     code = matches[0].split()[0]
-    second = code.split('FREETHREES')[1]
+    try:
+        second = code.split('FREETHREES')[1]
+    except:
+        second = ''
     return code, second
 
 
@@ -175,3 +180,4 @@ def choose_option():
 if __name__ == "__main__":
     choose_option()
     asyncio.run(main())
+

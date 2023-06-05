@@ -14,6 +14,12 @@ bot that gets codes from [chipotle's free burrito promotion](https://chipotle.co
 pip install -r requirements.txt
 ```
 
+## Before Running
+
+- Enable accessibility for terminal (if you want to paste into imessage)
+  - System Preferences > Security & Privacy > Privacy > Accessibility > Visual Studio Code
+
+
 ## usage
 
 ### clone / download repository
